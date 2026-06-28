@@ -233,32 +233,6 @@ Unlike traditional implementations that add only one pairing per iteration, this
 
 ---
 
-## Repository Structure
-
-```text
-src/
-    network_generation.jl
-    restricted_master_problem.jl
-    pricing_problem.jl
-    column_generation.jl
-    integer_solver.jl
-
-data/
-    sample flight schedules
-
-figures/
-    workflow diagrams
-    runtime plots
-
-results/
-    generated pairings
-    runtime statistics
-
-report/
-    project report
-```
-
----
 
 ## Results
 
