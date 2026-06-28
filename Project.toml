@@ -1,0 +1,15 @@
+[project]
+name = "AirlineCrewPairing"
+uuid = "12345678-1234-5678-1234-567812345678"
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+JuMP = "4076af6c-e467-56ae-b986-b466b2cbd547"
+Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+Random = "9a3f8081-0288-5675-b1a9-c7f3536a26b5"
+
+[compat]
+julia = "1.9"
+JuMP = "1.16"
+Gurobi = "1.0"
