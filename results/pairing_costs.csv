@@ -1,0 +1,4 @@
+InstanceSize,Opt1_Iterations,Opt2_Iterations,Opt1_Runtime_Sec,Opt2_Runtime_Sec,Net_Speedup_Factor
+Small (50 Flights),37,3,2.754,0.006,459.0
+Medium (100 Flights),78,6,30.72,0.011,2792.0
+Large (150 Flights),161,6,148.352,0.028,5298.0
