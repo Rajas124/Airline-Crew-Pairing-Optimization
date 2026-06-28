@@ -1,5 +1,10 @@
 # Airline-Crew-Pairing-Optimization
-Airline crew pairing is a large-scale set partitioning problem where crews must be assigned to flight legs while satisfying FAA regulations, duty limits, rest requirements, and base constraints. Enumerating all feasible pairings is computationally intractable, so this project implements a Branch-and-Price framework using Column Generation.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Julia 1.9+](https://img.shields.io/badge/Julia-1.9+-blue)](https://julialang.org)
+[![Status: Active Development](https://img.shields.io/badge/Status-Active%20Development-brightgreen)](#)
+
+Airline crew pairing is a large-scale set partitioning problem where crews must be assigned to flight legs while satisfying FAA regulations, duty limits, rest requirements, and base constraints. En[...]
 # Airline Crew Pairing Optimization using Column Generation
 
 *A scalable implementation of the Airline Crew Pairing Problem using Set Partitioning, Column Generation, and Mixed Integer Programming in Julia.*
@@ -8,13 +13,13 @@ Airline crew pairing is a large-scale set partitioning problem where crews must 
 
 ## Overview
 
-The Airline Crew Pairing Problem (CPP) is one of the largest and most computationally challenging optimization problems in airline operations. Given a schedule of flight legs, the objective is to construct feasible crew pairings that cover every scheduled flight exactly once while minimizing operational costs and satisfying regulatory and operational constraints.
+The Airline Crew Pairing Problem (CPP) is one of the largest and most computationally challenging optimization problems in airline operations. Given a schedule of flight legs, the objective is to [...]
 
-The number of feasible pairings grows exponentially with the size of the flight schedule, making complete enumeration computationally impossible even for moderately sized airline networks. Modern airline optimization systems therefore rely on decomposition techniques rather than explicitly generating every feasible pairing.
+The number of feasible pairings grows exponentially with the size of the flight schedule, making complete enumeration computationally impossible even for moderately sized airline networks. Modern [...]
 
-This project implements a **Column Generation** framework that dynamically generates only promising crew pairings during optimization. Instead of solving an enormous set partitioning problem containing billions of variables, the algorithm alternates between solving a Restricted Master Problem (RMP) and a Pricing Problem until no improving pairings remain.
+This project implements a **Column Generation** framework that dynamically generates only promising crew pairings during optimization. Instead of solving an enormous set partitioning problem conta[...]
 
-The implementation is written in **Julia** using **JuMP** and **Gurobi**, and demonstrates how decomposition techniques dramatically improve computational performance for large-scale airline scheduling problems.
+The implementation is written in **Julia** using **JuMP** and **Gurobi**, and demonstrates how decomposition techniques dramatically improve computational performance for large-scale airline sched[...]
 
 ---
 
@@ -229,7 +234,7 @@ The implementation follows the classical Column Generation framework.
 6. Repeat until no improving pairings remain.
 7. Solve the final integer master problem using the generated columns.
 
-Unlike traditional implementations that add only one pairing per iteration, this project also implements **multi-column pricing** using Gurobi's Solution Pool to generate multiple improving pairings simultaneously, substantially reducing the number of master problem iterations.
+Unlike traditional implementations that add only one pairing per iteration, this project also implements **multi-column pricing** using Gurobi's Solution Pool to generate multiple improving pairi[...]
 
 ---
 
@@ -258,10 +263,9 @@ These results demonstrate the effectiveness of generating multiple improving pai
 
 ## Technologies
 
-* Julia
-* JuMP
-* Gurobi Optimizer
-* Mixed Integer Programming
+* **Julia** 1.9+
+* **JuMP** – Mathematical Optimization Modeling
+* **Gurobi Optimizer** – Mixed Integer Programming Solver
 * Column Generation
 * Set Partitioning
 * Network Optimization
@@ -280,7 +284,22 @@ Potential extensions include:
 
 ---
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+
+---
+
 ## References
 
+For academic references and recommended reading, see [REFERENCES.md](REFERENCES.md).
+
+Key citations:
 * Barnhart, C., Johnson, E., Nemhauser, G., Savelsbergh, M., & Vance, P. (2003). *Airline Crew Scheduling.*
 * Klabjan, D., Johnson, E., Nemhauser, G., Gelman, E., & Ramaswamy, S. (1999). *Solving Large Airline Crew Scheduling Problems.*
